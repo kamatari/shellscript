@@ -1,7 +1,7 @@
 #! /bin/sh
 
 cat << comment
- * when you want to write roop process
+ * when you want to write loop process
    like high-level language.
 comment
 echo "\n"
@@ -9,7 +9,7 @@ echo "\n"
 #---[using 'while']------
 count=0
 while [ $count -le 10 ];
-  do 
+  do
     echo "* $count"
     count=`expr $count + 2`
   done
