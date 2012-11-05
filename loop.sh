@@ -6,7 +6,7 @@ cat << comment
 comment
 echo "\n"
 
-#---[using 'while']------
+#---[ using 'while' ]------
 count=0
 while [ $count -le 10 ];
   do
@@ -15,7 +15,7 @@ while [ $count -le 10 ];
   done
 echo "\n"
 
-#---[using 'if']------
+#---[ using 'if' ]------
 count=0
 while :
   do
@@ -28,5 +28,12 @@ while :
   done
 echo "\n"
 
-#---[using 'for']------
-
+#---[ using 'for' ]------
+count=0
+start_num=70 end_num=85
+num_exec=`expr $end_num - $start_num + 1`
+for count in `yes "" | cat -n | head -$end_num |tail -$num_exec`;
+  do
+    echo "* $count"
+  done
+echo "\n"
