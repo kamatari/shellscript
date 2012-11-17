@@ -37,3 +37,12 @@ for count in `yes "" | cat -n | head -$end_num |tail -$num_exec`;
     echo "* $count"
   done
 echo "\n"
+
+#---[ using 'for + awk' ]------
+count=0
+start_num=30 end_num=60 increment_num=3
+for count in `yes "" | cat -n | head -$end_num | awk "(NR % $increment_num == 0) && (NR >= $start_num) {print NR}"`
+  do
+    echo "* $count"
+  done
+echo "\n"
